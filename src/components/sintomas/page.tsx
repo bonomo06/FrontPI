@@ -9,7 +9,7 @@ export default function Sintomas() {
                 <Card>
                     <div className="grid grid-cols-2">
                         <p>dor de cabeça</p>
-                        <p><img src="/assets/dorcabeca.png" width="100px" ></img></p>
+                        <p><img src="/assets/dorcabeca.png" width="100px"></img></p>
                     </div>
                 </Card>
                 <Card>
@@ -22,14 +22,14 @@ export default function Sintomas() {
                 <Card>
                 <div className="grid grid-cols-2">
                         <p>dor nos olhos</p>
-                        <p><img src="/assets/olho.png"></img></p>
+                        <p><img src="/assets/olho.png" width="100px"></img></p>
                     </div>
                 </Card>
             {/*parte 3*/}
             <Card>
                     <div className="grid grid-cols-2">
-                        <p><img src="/assets/febre.png"></img></p>
                         <p>febre</p>
+                        <p><img src="/assets/febre.png" width="100px"></img></p>
                     </div>
                 </Card>
                 <Card>
@@ -42,14 +42,14 @@ export default function Sintomas() {
                 <Card>
                 <div className="grid grid-cols-2">
                         <p>nausea</p>
-                        <p><img src="/assets/tontura.png"></img></p>
+                        <p><img src="/assets/tontura.png" width="100px"></img></p>
                     </div>
                 </Card>
             {/*parte 5*/}
             <Card>
                     <div className="grid grid-cols-2">
                         <p>vomito</p>
-                        <p><img src="/assets/vomito.png"></img></p>
+                        <p><img src="/assets/vomito.png" width="100px"></img></p>
                     </div>
                 </Card>
                 <Card>
@@ -62,14 +62,14 @@ export default function Sintomas() {
                 <Card>
                 <div className="grid grid-cols-2">
                         <p>diarreia</p>
-                        <p><img src="/assets/diarreia.png"></img></p>
+                        <p><img src="/assets/diarreia.png" width="100px"></img></p>
                     </div>
                 </Card>
             {/*parte 7*/}
             <Card>
                     <div className="grid grid-cols-2">
                         <p>sangramentos</p>
-                        <p><img src="/assets/sangramento.png"></img></p>
+                        <p><img src="/assets/sangramento.png" width="100px"></img></p>
                     </div>
                 </Card>
                 <Card>
@@ -82,14 +82,14 @@ export default function Sintomas() {
                 <Card>
                 <div className="grid grid-cols-2">
                         <p>mal estar</p>
-                        <p><img src="/assets/malestar.png"></img></p>
+                        <p><img src="/assets/malestar.png" width="100px"></img></p>
                     </div>
                 </Card>
             {/*parte 9*/}
             <Card>
                     <div className="grid grid-cols-2">
                         <p>falta de apetite</p>
-                        <p><img src="/assets/faltaapetite.png"></img></p>
+                        <p><img src="/assets/faltaapetite.png" width="100px"></img></p>
                     </div>
                 </Card>
                 <Card>
@@ -102,14 +102,14 @@ export default function Sintomas() {
                 <Card>
                 <div className="grid grid-cols-2">
                         <p>cansaço</p>
-                        <p><img src="/assets/fadiga.png"></img></p>
+                        <p><img src="/assets/fadiga.png" width="100px"></img></p>
                     </div>
                 </Card>
             {/*parte 11*/}
             <Card>
                     <div className="grid grid-cols-2">
                         <p>manchas vermelhas</p>
-                        <p><img src="/assets/mancha.png"></img></p>
+                        <p><img src="/assets/mancha.png" width="100px"></img></p>
                     </div>
                 </Card>
                 <Card>
@@ -122,7 +122,7 @@ export default function Sintomas() {
                 <Card>
                 <div className="grid grid-cols-2">
                         <p>dor abdominal</p>
-                        <p><img src="/assets/dorcabeca.png"></img></p>
+                        <p><img src="/assets/dorcabeca.png" width="100px"></img></p>
                     </div>
                 </Card>
             </div>

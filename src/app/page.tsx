@@ -7,6 +7,7 @@ import Card from "@/components/card/page"
 import ImageCarousel from "@/components/carousel/page"
 import Grafico from "@/components/grafico/page"
 import Sintomas from "@/components/sintomas/page"
+import Cadastrar from "@/components/cadastre/page"
 
 export default function Home() {
 
@@ -40,6 +41,7 @@ export default function Home() {
       <Infos />
       <Sintomas />
       <Grafico />
+      <Cadastrar />
     </>
   )
 }
