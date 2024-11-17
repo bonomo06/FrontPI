@@ -11,7 +11,6 @@ export default function Infos() {
             <div></div>
             <div></div>
         </div>
-        <div><p>video</p></div>
         </>
     )
 }

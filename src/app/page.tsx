@@ -5,23 +5,22 @@ import NewsList from "@/components/noticias/page"
 import Infos from "@/components/info-dengue/page"
 import Card from "@/components/card/page"
 import ImageCarousel from "@/components/carousel/page"
+import Grafico from "@/components/grafico/page"
+import Sintomas from "@/components/sintomas/page"
 
 export default function Home() {
 
   return (
     <>
       <Header />
-      <div>
-        <h1>Home</h1>
-      </div>
       <ImageCarousel />
       <NewsList />
-      <div className="grid grid-cols-4 text-white">
+      <div className="grid grid-cols-4">
         {/* <Card buttonText="Saiba mais" onButtonClick={() => alert('Botão do card clicado')}> 
           <h2>Card</h2>
           <p>Conteúdo do card</p>
         </Card> */}
-        <Card>
+        <Card bgColor="bg-black" textColor="text-white">
           <h2>A Dengue</h2>
           <p>A dengue é transmitida pelo mosquito Aedes aegypti, presente principalmente em áreas urbanas de regiões tropicais e subtropicais.</p>
         </Card>
@@ -39,6 +38,8 @@ export default function Home() {
         </Card>
       </div>
       <Infos />
+      <Sintomas />
+      <Grafico />
     </>
   )
 }

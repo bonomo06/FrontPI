@@ -4,12 +4,14 @@ interface CardProps {
     children: React.ReactNode;
     buttonText?: string; // Texto do botão
     onButtonClick?: () => void; // Função para o clique no botão
+    bgColor?: string; // Cor de fundo do card
+    textColor?: string; // Cor do texto do card
 }
 
-export default function Card({ children, buttonText, onButtonClick }: CardProps) {
+export default function Card({ children, buttonText, onButtonClick, bgColor, textColor }: CardProps) {
 
     return (
-        <div className="bg-stone-900 rounded m-4">
+        <div className={`${bgColor} ${textColor} rounded`}>
             {children}
             {buttonText && onButtonClick && (
                 <button
