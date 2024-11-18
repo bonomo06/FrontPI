@@ -63,7 +63,7 @@ export default function Cadastrar() {
     fetchVirus();
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -112,7 +112,7 @@ export default function Cadastrar() {
     }
   };
 
-  const handleSelectSintoma = (e) => {
+  const handleSelectSintoma = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedId = parseInt(e.target.value);
     setSintomasSelecionados((prev) =>
       prev.includes(selectedId) ? prev.filter((id) => id !== selectedId) : [...prev, selectedId]

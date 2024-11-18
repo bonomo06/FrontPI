@@ -28,7 +28,7 @@ export default function Header() {
           </div>
 
           {/* Menu de navegação */}
-          <div className="hidden sm:flex justify-end space-x-4">
+          <div className="hidden sm:flex justify-end space-x-8">
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
               href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/dengue"
