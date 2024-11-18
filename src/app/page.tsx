@@ -1,7 +1,7 @@
 "use client"
 
 import Header from "@/components/header/page"
-import NewsList from "@/components/noticias/page"
+import Noticias from "@/components/noticias/page"
 import Card from "@/components/card/page"
 import ImageCarousel from "@/components/carousel/page"
 import Grafico from "@/components/grafico/page"
@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <ImageCarousel />
       <div id="news">
-        <NewsList />
+        <Noticias />
       </div>
       <div id="dengue">
         <h1 className="text-center mt-20 text-2xl font-mono">Informe-se</h1>

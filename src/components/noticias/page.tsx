@@ -1,66 +1,57 @@
 "use client"
-import { useEffect, useState } from "react";
-import { getNewsAboutDengue } from "./newsAPI";
-
-interface Article {
-    title: string;
-    description: string;
-    url: string;
-    publishedAt: string;
-}
-
-    // Função para ajustar a descrição
-    const formatDescription = (description: string, maxLength: number = 350) => {
-        // Se a descrição for maior que o limite, ela é truncada e adiciona "..." no final
-        if (description.length > maxLength) {
-            return description.slice(0, maxLength) + "...";
-        }
-        return description;
-};
-
-export default function NewsList() {
-    const [news, setNews] = useState<Article[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        const fetchNews = async () => {
-        const newsData = await getNewsAboutDengue();
-
-        // Filtrar para mostrar apenas notícias com palavras-chave específicas
-        const filteredNews = newsData.filter((article: Article) =>
-            article.title.toLowerCase().includes("dengue") || article.description.toLowerCase().includes("dengue")// Exemplo de palavra-chave
-        );
-
-        setNews(filteredNews);
-        setLoading(false);
-    };
-
-    fetchNews();
-    }, []);
-
-    console.log(getNewsAboutDengue)
-
-    if (loading) {
-        return <div>Carregando notícias...</div>;
-    }
-
+export default function Noticias() {
+    const noticias = [
+      {
+        titulo: "Brasil bate recorde de mortes por dengue em 2024",
+        subtitulo: "Com 5.536 óbitos confirmados até outubro, Brasil registra aumento de 400% nos casos.",
+        link: "https://www.cofen.gov.br/dengue-aumento-400%25-em-2024",
+      },
+      {
+        titulo: "Dengue atinge 6,5 milhões de casos no Brasil até outubro",
+        subtitulo: "O país vive uma epidemia com incidência de 3.221,7 casos por 100 mil habitantes.",
+        link: "https://www.cofen.gov.br/dengue-aumento-400%25-em-2024",
+      },
+      {
+        titulo: "Previsão de pico da dengue entre março e abril de 2025",
+        subtitulo: "Especialistas alertam para novo aumento da doença em 2025, com risco de novos focos de infecção.",
+        link: "https://www.cofen.gov.br/dengue-aumento-400%25-em-2024",
+      },
+      {
+        titulo: "São Paulo concentra mais de 2 milhões de casos de dengue",
+        subtitulo: "Estado lidera o número de infecções e mortes confirmadas pela doença.",
+        link: "https://www.cofen.gov.br/dengue-aumento-400%25-em-2024",
+      },
+      {
+        titulo: "Vacinação contra dengue pode ser chave para controlar epidemias",
+        subtitulo: "Especialistas apontam que a vacina deve ser implementada de forma mais abrangente no país.",
+        link: "https://www.cofen.gov.br/dengue-aumento-400%25-em-2024",
+      },
+    ];
+  
     return (
-        <div className="mt-20">
-            <h1 className="text-center text-xl mb-8">Notícias sobre a Dengue</h1>
-            <ul className="text-justify m-2">
-            {news.map((article, index) => (
-                <li key={index}>
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                    <h3>{article.title}</h3>
-                    <p>{formatDescription(article.description)}</p>
-                    <small>{new Date(article.publishedAt).toLocaleDateString()}</small>
-                    <hr className="h-8" />
-                </a>
-                </li>
-            ))}
-            </ul>
-        </div>
+      <div className="max-w-4xl mx-auto p-4">
+        <h1 className="text-2xl font-bold mb-6 text-center">Últimas Notícias</h1>
+        <ul className="space-y-4">
+          {noticias.map((noticia, index) => (
+            <li
+              key={index}
+              className="border p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <a
+                href={noticia.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <h2 className="text-lg font-semibold text-blue-600 hover:underline">
+                  {noticia.titulo}
+                </h2>
+                <p className="text-gray-700">{noticia.subtitulo}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
-}
-
-    //tentar pegar apenas algumas noticias, colocar imagens e formatar o texto da noticia
+  }
+  
