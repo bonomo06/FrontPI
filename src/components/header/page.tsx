@@ -31,37 +31,37 @@ export default function Header() {
           <div className="hidden sm:flex justify-end space-x-4">
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
-              href="/"
+              href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/dengue"
             >
               Gov
             </Link>
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
-              href="/"
+              href="https://conhecadengue.com.br/vacina"
             >
               Vacinação
             </Link>
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
-              href="/"
+              href="#news"
             >
               Notícias
             </Link>
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
-              href="/"
+              href="#dengue"
             >
               Dengue
             </Link>
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
-              href="/"
+              href="#sintomas"
             >
               Sintomas
             </Link>
             <Link
               className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
-              href="/"
+              href="#grafico"
             >
               Números
             </Link>
