@@ -4,7 +4,7 @@ import Card from "@/components/card/page"
 export default function Sintomas() {
     return (
         <>
-        <h1 className="text-center mt-20 mb-10 text-xl">Sintomas</h1>
+        <h1 className="text-center mt-20 mb-10 text-2xl">Sintomas</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 m-5 p-3 gap-4">
             {/*parte 1*/}
                 <Card>

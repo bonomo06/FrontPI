@@ -125,6 +125,7 @@ export default function Grafico() {
     return (
         <>
             <h1 className="text-center text-2xl text-black">Gráficos</h1>
+            <p className="text-center text-xl font-bold">Estes gráficos mostram os sintomas e vírus que outros usuários sentiram quando estiveram com dengue.</p>
             <div className="flex flex-col md:flex-row justify-around items-center w-full p-4">
             <div className="w-full max-w-xs md:max-w-sm h-[500px] bg-gray-500 p-4 rounded-lg shadow-lg mb-5">
                 <h3 className="text-center text-white mb-4">Gráfico de Vírus</h3>

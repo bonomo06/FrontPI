@@ -132,7 +132,7 @@ export default function Cadastrar() {
 
   return (
     <>
-  <div>
+  <div className='font-mono'>
       <h1 className='text-center m-20 text-xl font-bold font-mono'>Cadastrar Usuário</h1>
       <form onSubmit={handleSubmit}>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 m-5 bg-gray-500 text-white rounded p-5 shadow-lg shadow-gray-500'>
