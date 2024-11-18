@@ -53,7 +53,7 @@ export default function Grafico() {
     }, []);
 
     if (loading) {
-        return <div className="text-center">Carregando...</div>;
+        return <div className="text-center">Carregando gráficos...</div>;
     }
 
     // Configuração dos gráficos
@@ -63,7 +63,7 @@ export default function Grafico() {
         {
             label: "Virus",
             data: virusData,
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+            backgroundColor: ["#8B0000", "#FF0000", "#FF6347", "#FA8072"],
         },
         ],
     };
@@ -88,18 +88,18 @@ export default function Grafico() {
             label: "Sintomas",
             data: symptomData,
             backgroundColor: [
-            "#AA6384",
-            "#56A2EB",
-            "#FECE56",
-            "#FDB45C",
-            "#FF5A5E",
-            "#BFBF30",
-            "#46BFBD",
-            "#FDBF45",
-            "#949FB1",
-            "#4D5360",
-            "#AC64AD",
-            "#DAA520",
+            "#00008B",
+            "#0000CD",
+            "#0000FF",
+            "#6495ED",
+            "#4169E1",
+            "#1E90FF",
+            "#00BFFF",
+            "#87CEFA",
+            "#87CEEB",
+            "#ADD8E6",
+            "#4682B4",
+            "#191970",
             ],
         },
         ],
@@ -126,7 +126,7 @@ export default function Grafico() {
         <>
             <h1 className="text-center text-2xl text-black">Gráficos</h1>
             <div className="flex flex-col md:flex-row justify-around items-center w-full p-4">
-            <div className="w-full max-w-xs md:max-w-sm h-[500px] bg-gray-500 p-4 rounded-lg shadow-lg">
+            <div className="w-full max-w-xs md:max-w-sm h-[500px] bg-gray-500 p-4 rounded-lg shadow-lg mb-5">
                 <h3 className="text-center text-white mb-4">Gráfico de Vírus</h3>
                 <div className="h-[350px] flex items-center justify-center">
                     <Doughnut data={virusDataConfig} options={options} />

@@ -17,4 +17,6 @@
 body {
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  min-width: 100%;
 }

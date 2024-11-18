@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+DEUCERTO.txt
 
 # next.js
 /.next/

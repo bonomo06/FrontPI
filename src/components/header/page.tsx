@@ -1,22 +1,126 @@
 import Link from "next/link"
+import { useState } from "react"
 import LogoPref from "../assets/logo_prefeitura.svg"
 
 export default function Header() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <>
-            <header className="grid grid-cols-2 gap-4 bg-gray-500 text-white font-bold font-mono">
-                <div>
-                    <Link href="/"><img className="m-2" src="/assets/prefeituraIMG.png" alt="" width={70} height={70} /></Link>
-                </div>
-                <div className="flex justify-end">
-                    <Link className="m-8 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300" href="/">Gov</Link>
-                    <Link className="m-8 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300" href="/">Vacinação</Link>
-                    <Link className="m-8 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300" href="/">Notícias</Link>
-                    <Link className="m-8 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300" href="/">Dengue</Link>
-                    <Link className="m-8 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300" href="/">Sintomas</Link>
-                    <Link className="m-8 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300" href="/">Números</Link>
-                </div>
-            </header>
-        </>
+      <header className="bg-gray-500 text-white font-bold font-mono p-4">
+        <div className="grid grid-cols-2 gap-4 items-center">
+          {/* Logo */}
+          <div className="flex justify-start">
+            <Link href="/">
+              <img
+                className="m-2"
+                src="/assets/prefeituraIMG.png"
+                alt="Logo"
+                width={70}
+                height={70}
+              />
+            </Link>
+          </div>
+
+          {/* Menu de navegação */}
+          <div className="hidden sm:flex justify-end space-x-4">
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Gov
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Vacinação
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Notícias
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Dengue
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Sintomas
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Números
+            </Link>
+          </div>
+
+          {/* Menu mobile (aparece em telas pequenas) */}
+          <div className="sm:hidden flex justify-end">
+            <button
+              className="text-white"
+              onClick={toggleMenu}
+            >
+              <span className="material-icons">☰</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Links do menu em telas pequenas */}
+        {menuOpen && (
+          <div className="sm:hidden flex flex-col items-center mt-4 space-y-4">
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Gov
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Vacinação
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Notícias
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Dengue
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Sintomas
+            </Link>
+            <Link
+              className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:underline duration-300"
+              href="/"
+            >
+              Números
+            </Link>
+          </div>
+        )}
+      </header>
+    </>
+
     )
 }

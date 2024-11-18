@@ -27,17 +27,17 @@ export default function ImageCarousel() {
         <img
           src={currentImage.src}
           alt={`Imagem ${currentIndex + 1}`}
-          className="w-full h-[800px] object-cover"
+          className="w-full h-auto sm:h-[600px] lg:h-[800px] object-cover"
         />
         <button
           onClick={handlePrevious}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 cursor-pointer"
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 cursor-pointer sm:left-4 lg:left-2"
         >
           ←
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 cursor-pointer"
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 cursor-pointer sm:right-4 lg:right-2"
         >
           →
         </button>
@@ -45,7 +45,7 @@ export default function ImageCarousel() {
 
     <div className="mt-4">
       <a href={currentImage.url} target="_blank" rel="noopener noreferrer">
-        <button className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+        <button className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-blue-700 w-full sm:w-auto">
           Ir para o site
         </button>
       </a>
