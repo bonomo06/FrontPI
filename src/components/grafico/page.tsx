@@ -8,9 +8,14 @@ import {
     ArcElement,
     Tooltip,
     Legend,
+    TooltipItem as ChartTooltipItem
 } from 'chart.js'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
+
+interface DatalabelContext {
+    dataset: { data: number[] };
+}
 
 export default function Grafico() {
     const [virusData, setVirusData] = useState<number[]>([]);
@@ -120,18 +125,18 @@ export default function Grafico() {
             },
             tooltip: {
                 callbacks: {
-                    label: (tooltipItem: any) => {
-                        let value = tooltipItem.raw;
-                        let total = tooltipItem.dataset.data.reduce((acc: number, current: number) => acc + current, 0);
-                        let percentage = ((value / total) * 100).toFixed(2) + '%';
+                    label: (tooltipItem: ChartTooltipItem<"doughnut">) => {
+                        const value = tooltipItem.raw as number;
+                        const total = tooltipItem.dataset.data.reduce((acc: number, current: number) => acc + current, 0);
+                        const percentage = ((value / total) * 100).toFixed(2) + '%';
                         return `${tooltipItem.label}: ${percentage}`;
                     },
                 },
             },
             datalabels: {
-                formatter: (value: any, context: any) => {
-                    let total = context.dataset.data.reduce((acc: number, current: number) => acc + current, 0);
-                    let percentage = ((value / total) * 100).toFixed(2) + '%';
+                formatter: (value: number, context: DatalabelContext) => {
+                    const total = context.dataset.data.reduce((acc: number, current: number) => acc + current, 0);
+                    const percentage = ((value / total) * 100).toFixed(2) + '%';
                     return percentage;
                 },
                 color: 'white',
