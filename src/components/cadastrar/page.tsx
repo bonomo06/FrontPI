@@ -1,12 +1,22 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+interface Sintoma {
+  id: number;
+  name: string;
+}
+
+interface Virus {
+  id: number;
+  name: string;
+}
+
 export default function Cadastrar() {
   const [name, setname] = useState('');
   const [email, setEmail] = useState('');
-  const [sintomas, setSintomas] = useState<any[]>([]); // Tipo explícito para sintomas (array de qualquer tipo)
+  const [sintomas, setSintomas] = useState<Sintoma[]>([]); // Tipo explícito para sintomas (array de qualquer tipo)
   const [sintomasSelecionados, setSintomasSelecionados] = useState<number[]>([]); // Tipo explícito para sintomasSelecionados (array de números)
-  const [virus, setVirus] = useState<any[]>([]);
+  const [virus, setVirus] = useState<Virus[]>([]);
   const [virusSelecionados, setVirusSelecionados] = useState<number[]>([0]);
 
   const formatarSintoma = (nome: string) => {

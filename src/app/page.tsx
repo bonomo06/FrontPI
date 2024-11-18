@@ -2,7 +2,6 @@
 
 import Header from "@/components/header/page"
 import NewsList from "@/components/noticias/page"
-import Infos from "@/components/info-dengue/page"
 import Card from "@/components/card/page"
 import ImageCarousel from "@/components/carousel/page"
 import Grafico from "@/components/grafico/page"

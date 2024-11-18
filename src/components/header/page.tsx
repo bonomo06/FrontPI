@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { useState } from "react"
-import LogoPref from "../assets/logo_prefeitura.svg"
 
 export default function Header() {
 

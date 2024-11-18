@@ -9,7 +9,6 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js'
-import { toPadding } from "chart.js/helpers";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
