@@ -118,6 +118,28 @@ export default function Grafico() {
                     color: "white",
                 },
             },
+            tooltip: {
+                callbacks: {
+                    label: (tooltipItem: any) => {
+                        let value = tooltipItem.raw;
+                        let total = tooltipItem.dataset.data.reduce((acc: number, current: number) => acc + current, 0);
+                        let percentage = ((value / total) * 100).toFixed(2) + '%';
+                        return `${tooltipItem.label}: ${percentage}`;
+                    },
+                },
+            },
+            datalabels: {
+                formatter: (value: any, context: any) => {
+                    let total = context.dataset.data.reduce((acc: number, current: number) => acc + current, 0);
+                    let percentage = ((value / total) * 100).toFixed(2) + '%';
+                    return percentage;
+                },
+                color: 'white',
+                font: {
+                    weight: 'bold',
+                    size: 12,
+                },
+            },
         },
     };
 

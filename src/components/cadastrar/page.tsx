@@ -192,7 +192,7 @@ export default function Cadastrar() {
           <div></div>
           <div></div>
           <div>
-          <button className='w-full sm:w-auto m-5 bg-white text-gray-500 p-3 rounded shadow-lg' type="submit">Cadastrar</button>
+          <button className='w-full sm:w-auto m-5 bg-white text-gray-500 p-3 rounded shadow-lg mx-auto' type="submit">Cadastrar</button>
           </div>
         </div>
         </form>
