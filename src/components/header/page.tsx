@@ -20,8 +20,8 @@ export default function Header() {
                 className="m-2"
                 src="/assets/prefeituraIMG.png"
                 alt="Logo"
-                width={70}
-                height={70}
+                width={150}
+                height={150}
               />
             </Link>
           </div>
