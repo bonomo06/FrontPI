@@ -116,6 +116,7 @@ export default function Grafico() {
                         size: 10,
                     },
                     boxWidth: 10,
+                    color: "white",
                 },
             },
         },
@@ -125,13 +126,13 @@ export default function Grafico() {
         <>
             <h1 className="text-center text-2xl text-black">Gráficos</h1>
             <div className="flex flex-col md:flex-row justify-around items-center w-full p-4">
-            <div className="w-full max-w-xs md:max-w-sm h-[500px] bg-slate-950 p-4 rounded-lg shadow-lg">
+            <div className="w-full max-w-xs md:max-w-sm h-[500px] bg-gray-500 p-4 rounded-lg shadow-lg">
                 <h3 className="text-center text-white mb-4">Gráfico de Vírus</h3>
                 <div className="h-[350px] flex items-center justify-center">
                     <Doughnut data={virusDataConfig} options={options} />
                 </div>
             </div>
-            <div className="w-full max-w-xs md:max-w-sm h-[500px] p-4 bg-stone-900 rounded-lg shadow-lg">
+            <div className="w-full max-w-xs md:max-w-sm h-[500px] p-4 bg-gray-500 rounded-lg shadow-lg">
                 <h3 className="text-center text-white mb-4">Gráfico de Sintomas</h3>
                 <div className="h-[400px] flex items-center justify-center">
                     <Doughnut data={symptomDataConfig} options={options} />

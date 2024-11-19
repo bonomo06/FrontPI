@@ -10,7 +10,7 @@ interface Article {
 }
 
     // Função para ajustar a descrição
-    const formatDescription = (description: string, maxLength: number = 200) => {
+    const formatDescription = (description: string, maxLength: number = 350) => {
         // Se a descrição for maior que o limite, ela é truncada e adiciona "..." no final
         if (description.length > maxLength) {
             return description.slice(0, maxLength) + "...";
@@ -45,15 +45,16 @@ export default function NewsList() {
     }
 
     return (
-        <div>
-            <h2>Notícias sobre a Dengue</h2>
-            <ul>
+        <div className="mt-20">
+            <h1 className="text-center text-xl mb-8">Notícias sobre a Dengue</h1>
+            <ul className="text-justify m-2">
             {news.map((article, index) => (
                 <li key={index}>
                 <a href={article.url} target="_blank" rel="noopener noreferrer">
                     <h3>{article.title}</h3>
                     <p>{formatDescription(article.description)}</p>
                     <small>{new Date(article.publishedAt).toLocaleDateString()}</small>
+                    <hr className="h-8" />
                 </a>
                 </li>
             ))}

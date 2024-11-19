@@ -131,50 +131,62 @@ export default function Cadastrar() {
   
 
   return (
-    <div>
-      <h1>Cadastrar Usuário com Sintomas de Dengue</h1>
+    <>
+  <div>
+      <h1 className='text-center m-20 text-xl font-bold font-mono'>Cadastrar Usuário</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Nome:
-          <input type="text" value={name} onChange={(e) => setname(e.target.value)} required />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </label>
-        <br />
-        <h3>Selecione os sintomas:</h3>
-        {sintomas.map((sintoma) => (
-          <div key={sintoma.id}>
+        <div className='grid grid-cols-5 m-10 bg-gray-500 text-white rounded p-5 shadow-lg shadow-gray-500'>
+          <div>
             <label>
-              <input
-                type="checkbox"
-                value={sintoma.id}
-                checked={sintomasSelecionados.includes(sintoma.id)}
-                onChange={handleSelectSintoma}
-              />
-              {formatarSintoma(sintoma.name)}
+              Nome:
+              <input className='bg-white rounded p-1 m-1 w-60' type="text" value={name} onChange={(e) => setname(e.target.value)} required />
+            </label>
+            <br />
+            <label>
+              Email:
+              <input className='bg-white rounded p-1 m-1 w-60' type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </label>
           </div>
-        ))}
-        <h3>Selecione os virus:</h3>
-        {virus.map((virus) => (
-          <div key={virus.id}>
-            <label>
-              <input
-                type="checkbox"
-                value={virus.id}
-                checked={virusSelecionados.includes(virus.id)}
-                onChange={handleSelectVirus}
-              />
-              {virus.name}
-            </label>
+          <h3 className='text-xl'>Selecione os sintomas:</h3>
+          <div>
+          {sintomas.map((sintoma) => (
+            <div key={sintoma.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  value={sintoma.id}
+                  checked={sintomasSelecionados.includes(sintoma.id)}
+                  onChange={handleSelectSintoma}
+                />
+                {formatarSintoma(sintoma.name)}
+              </label>
+            </div>
+          ))}
           </div>
-        ))}
-        <br />
-        <button type="submit">Cadastrar</button>
-      </form>
+          <h3 className='text-xl'>Selecione os virus:</h3>
+          <div>
+          {virus.map((virus) => (
+            <div key={virus.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  value={virus.id}
+                  checked={virusSelecionados.includes(virus.id)}
+                  onChange={handleSelectVirus}
+                />
+                {virus.name}
+              </label>
+            </div>
+          ))}
+          </div>
+          <div></div>
+          <div></div>
+          <div>
+          <button className='m-10 bg-white text-gray-500 p-3 rounded shadow-lg' type="submit">Cadastrar</button>
+          </div>
+        </div>
+        </form>
     </div>
+    </>
   );
 }

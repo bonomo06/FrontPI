@@ -16,29 +16,29 @@ export default function Home() {
       <Header />
       <ImageCarousel />
       <NewsList />
-      <div className="grid grid-cols-4">
+      <h1 className="text-center mt-20 text-xl">Informe-se</h1>
+      <div className="grid grid-cols-4 mt-8 ml-4 mr-4 mb-10 gap-4">
         {/* <Card buttonText="Saiba mais" onButtonClick={() => alert('Botão do card clicado')}> 
           <h2>Card</h2>
           <p>Conteúdo do card</p>
         </Card> */}
-        <Card bgColor="bg-black" textColor="text-white">
-          <h2>A Dengue</h2>
-          <p>A dengue é transmitida pelo mosquito Aedes aegypti, presente principalmente em áreas urbanas de regiões tropicais e subtropicais.</p>
+        <Card bgColor="bg-gray-500" textColor="text-white">
+          <h2 className="text-center font-bold">Transmissão</h2>
+          <p className="m-3">A dengue é transmitida pelo mosquito Aedes aegypti, presente principalmente em áreas urbanas de regiões tropicais e subtropicais, tendo 4 sorotipos: DENV-1, DENV-2, DENV-3 E DENV-4</p>
         </Card>
-        <Card>
-          <h2>A doença</h2>
-          <p>A doença está associada a surtos sazonais, frequentemente em épocas de chuvas, quando há maior proliferação do mosquito transmissor.</p>
+        <Card bgColor="bg-gray-500" textColor="text-white">
+          <h2 className="text-center font-bold">Doença</h2>
+          <p className="m-3">A doença está associada a surtos sazonais, frequentemente em épocas de chuvas, quando há maior proliferação do mosquito transmissor.</p>
         </Card>
-        <Card>
-          <h2>Controle</h2>
-          <p>O controle da dengue envolve medidas preventivas, como eliminação de focos de água parada e campanhas de conscientização para evitar a reprodução do mosquito.</p>
+        <Card bgColor="bg-gray-500" textColor="text-white">
+          <h2 className="text-center font-bold">Controle</h2>
+          <p className="m-3">O controle da dengue envolve medidas preventivas, como eliminação de focos de água parada e campanhas de conscientização para evitar a reprodução do mosquito.</p>
         </Card>
-        <Card>
-          <h2>Gravidade</h2>
-          <p>A dengue pode causar sintomas graves, como hemorragias e falência de órgãos, especialmente nos casos de dengue hemorrágica, que requerem tratamento médico urgente.</p>
+        <Card bgColor="bg-gray-500" textColor="text-white">
+          <h2 className="text-center font-bold">Gravidade</h2>
+          <p className="m-3">A dengue pode causar sintomas graves, como hemorragias e falência de órgãos, especialmente nos casos de dengue hemorrágica, que requerem tratamento médico urgente.</p>
         </Card>
       </div>
-      <Infos />
       <Sintomas />
       <Grafico />
       <Cadastrar />
