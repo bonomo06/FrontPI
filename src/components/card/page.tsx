@@ -6,12 +6,13 @@ interface CardProps {
     onButtonClick?: () => void; // Função para o clique no botão
     bgColor?: string; // Cor de fundo do card
     textColor?: string; // Cor do texto do card
+    shadow?: string; // Sombra do card
 }
 
-export default function Card({ children, buttonText, onButtonClick, bgColor, textColor }: CardProps) {
+export default function Card({ children, buttonText, onButtonClick, bgColor, textColor, shadow }: CardProps) {
 
     return (
-        <div className={`${bgColor} ${textColor} rounded`}>
+        <div className={`${bgColor} ${textColor} ${shadow} rounded`}>
             {children}
             {buttonText && onButtonClick && (
                 <button
