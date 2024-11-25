@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <ImageCarousel />
+      <div className="m-10"><ImageCarousel /></div>
       <div id="news">
         <Noticias />
       </div>
       <div id="dengue">
-        <h1 className="text-center mt-20 text-2xl font-mono">Informe-se</h1>
-        <div className=" font-mono grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 mx-4 mb-10 gap-4">
+        <h1 className="text-center mt-20 text-2xl ">Informe-se</h1>
+        <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 mx-4 mb-10 gap-4">
           {/* <Card buttonText="Saiba mais" onButtonClick={() => alert('Botão do card clicado')}> 
             <h2>Card</h2>
             <p>Conteúdo do card</p>
@@ -43,9 +43,9 @@ export default function Home() {
           </Card>
         </div>
       </div>
-      <div id="sintomas" className="font-mono"><Sintomas /></div>
-      <div id="grafico" className="font-mono"><Grafico /></div>
-      <div className="font-mono"><Cadastrar /></div>
+      <div id="sintomas" className=""><Sintomas /></div>
+      <div id="grafico" className=""><Grafico /></div>
+      <div className=""><Cadastrar /></div>
       <Footer />
     </>
   )

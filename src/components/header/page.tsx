@@ -11,11 +11,11 @@ export default function Header() {
 
     return (
         <>
-      <header className="bg-gray-500 text-white font-bold font-mono p-4">
+      <header className="bg-gray-500 text-white font-bold p-4">
         <div className="grid grid-cols-2 gap-4 items-center">
           {/* Logo */}
           <div className="flex justify-start">
-            <Link href="/">
+            <Link href="https://www.indaiatuba.sp.gov.br">
               <img
                 className="m-2"
                 src="/assets/prefeituraIMG.png"

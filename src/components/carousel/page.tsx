@@ -1,23 +1,43 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const images = [
   { src: '/assets/imagem1Dengue.jpg', url: 'https://www.tuasaude.com/dengue/' }, 
   { src: '/assets/imagem2Dengue.jpg', url: 'https://hsv.org.br/dengue-sinais-de-alerta-formas-de-prevencao-e-tratamento/' },
   { src: '/assets/imagem4Dengue.jpeg', url: 'https://www.indaiatuba.sp.gov.br/saude/vigilancia-em-saude/vigilancia-epidemiologica/dengue/' }, 
-  // Adicione mais objetos conforme necessário
 ];
 
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+      const interval = setInterval(() => {
+          setFade(false);
+          setTimeout(() => {
+              setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+              setFade(true);
+          }, 500); 
+      }, 4000); // Muda a imagem a cada 4 segundos
+
+      return () => clearInterval(interval); 
+  }, []);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+    setFade(false);
+    setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFade(true);
+    }, 500);
+};
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+const handlePrevious = () => {
+    setFade(false);
+    setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+        setFade(true);
+    }, 500);
+};
 
   const currentImage = images[currentIndex];
 
@@ -27,7 +47,8 @@ export default function ImageCarousel() {
         <img
           src={currentImage.src}
           alt={`Imagem ${currentIndex + 1}`}
-          className="w-full h-auto sm:h-[600px] lg:h-[800px] object-cover"
+          className={`w-full h-auto sm:h-[600px] lg:h-[800px] object-cover transition-opacity duration-1000 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}
+          style={{ borderRadius: '10px' }}
         />
         <button
           onClick={handlePrevious}
